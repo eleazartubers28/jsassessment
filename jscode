@@ -3,7 +3,7 @@ const NFTs = []
 // this function will take in some values as parameters, create an
 // NFT object using the parameters passed to it for its metadata, 
 // and store it in the variable above.
-function mintNFT(_name, _eyeColor, _shirtType, _accessories) {
+function mintNFT(name, age, yearlevel) {
     const NFT = {
         "name":  name,
         "age": age,
@@ -17,22 +17,23 @@ function mintNFT(_name, _eyeColor, _shirtType, _accessories) {
 // and print their metadata with console.log()
 function listNFTs() {
     for(let i = 0; i < NFTs.length; i++){
-        console.log("ID: " + (i + 1));
+        console.log("ID No.: " + (i + 1));
         console.log("Name: " + NFTs[i].name);
         console.log("Age: " + NFTs[i].age);
         console.log("Year Level: " + NFTs[i].yearlevel);
+        console.log("------------------------------");
     }
 
 }
 
 // print the total number of NFTs we have minted to the console
 function getTotalSupply () {
-    console.log("\n" + NFTs.length);
+    console.log("Total NFT's Minted: " + NFTs.length);
 }
 
 // call your functions below this line
 mintNFT ("Jhon", 19, "2nd Year");
-mintNFT ("Eleazar", 20, "1st Year);
+mintNFT ("Eleazar", 20, "1st Year");
 mintNFT ("Pacquiao", 21, "3rd Year");
 listNFTs();
 getTotalSupply();
