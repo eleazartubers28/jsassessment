@@ -5,13 +5,12 @@ const NFTs = []
 // and store it in the variable above.
 function mintNFT(_name, _eyeColor, _shirtType, _accessories) {
     const NFT = {
-        "name":  _name,
-        "eyecolor": _eyeColor,
-        "shirtType": _shirtType,
-        "accessories": _accessories
+        "name":  name,
+        "age": age,
+        "yearlevel": yearlevel
     }
     NFTs.push (NFT);
-    console.log ("Minted: " + _name);
+    console.log ("Minted: " + name);
 }
 
 // create a "loop" that will go through an "array" of NFT's
@@ -20,9 +19,8 @@ function listNFTs() {
     for(let i = 0; i < NFTs.length; i++){
         console.log("ID: " + (i + 1));
         console.log("Name: " + NFTs[i].name);
-        console.log("Eye Color: " + NFTs[i].eyecolor);
-        console.log("Shirt Type: " + NFTs[i].shirtType);
-        console.log("Accessories: " + NFTs[i].accessories);
+        console.log("Age: " + NFTs[i].age);
+        console.log("Year Level: " + NFTs[i].yearlevel);
     }
 
 }
@@ -33,8 +31,8 @@ function getTotalSupply () {
 }
 
 // call your functions below this line
-mintNFT ("Jhon", "Blue", "Sweater", "Choker");
-mintNFT ("Eleazar", "Brown", "Sweatshirt", "Gold Chains");
-mintNFT ("Pacquiao", "Brown", "Suit", "Diamond Necklace");
+mintNFT ("Jhon", 19, "2nd Year");
+mintNFT ("Eleazar", 20, "1st Year);
+mintNFT ("Pacquiao", 21, "3rd Year");
 listNFTs();
 getTotalSupply();
